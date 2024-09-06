@@ -28,4 +28,4 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-/bin/*.exe
+*.zip
