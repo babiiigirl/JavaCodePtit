@@ -27,8 +27,7 @@ public class PhanSo {
 
     public PhanSo tongPhanSo(PhanSo p) {
         long msc = lcm(this.mau, p.mau);
-        this.tu = msc / this.mau * this.tu; p.tu = msc / p.mau * p.tu;
-        PhanSo tong = new PhanSo(this.tu + p.tu, msc);
+        PhanSo tong = new PhanSo(msc / this.mau * this.tu + msc / p.mau * p.tu, msc);
         tong.rutGon();
         return tong;
     }
