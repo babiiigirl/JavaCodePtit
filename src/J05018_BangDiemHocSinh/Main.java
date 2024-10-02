@@ -21,8 +21,13 @@ public class Main {
         Collections.sort(arr, new Comparator<HocSinh>() {
             @Override
             public int compare(HocSinh o1, HocSinh o2) {
-                if (o1.diemTrungBinh() > o2.diemTrungBinh()) return -1;
-                else return 1;
+                if (o2.diemTrungBinh() - o1.diemTrungBinh() > 0) {
+                    return 1;
+                } else if (o2.diemTrungBinh() - o1.diemTrungBinh() < 0) {
+                    return -1;
+                } else {
+                    return o1.getMa().compareTo(o2.getMa());
+                }
             }
         });
         for (HocSinh x : arr) System.out.println(x);

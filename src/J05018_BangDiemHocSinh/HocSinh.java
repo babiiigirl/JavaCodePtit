@@ -23,7 +23,7 @@ public class HocSinh {
             if (i == 0 || i == 1) res += (diem[i] * 2);
             else res += diem[i];
         }
-        return (res / 12);
+        return (Math.round(res/ 12 * 10.0)/10.0);
     }
 
     public String xepLoai() {
@@ -35,6 +35,6 @@ public class HocSinh {
     }
 
     public String toString() {
-        return ma + " " + ten + " " + String.format("%.1f", diemTrungBinh()) + " " + xepLoai();
+        return ma + " " + ten + " " + diemTrungBinh() + " " + xepLoai();
     }
 }
