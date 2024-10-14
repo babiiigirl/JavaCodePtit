@@ -31,3 +31,4 @@ bin/
 *.zip
 *.in
 *.idea
+*.iml
